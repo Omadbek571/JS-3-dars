@@ -10,7 +10,10 @@ function hisoblash(a, b, operator) {
         natija = a * b;
     } else if (operator === '/') {
         natija = a / b;
-    } else {
+    } else if (operator === '%') {
+        natija = a % b;
+    } 
+    else {
         // Noto'g'ri operator uchun xatolik xabarini chiqaramiz
         natija = 'Notogri operator';
     }
@@ -20,7 +23,7 @@ function hisoblash(a, b, operator) {
 
 // Test qilib ko'ramiz
 let son1 = (+prompt("BIRINCHI SONI KIRITING"));
-let operator = (prompt("OPERATOR KIRITING YANI (+ - / *)"));
+let operator = (prompt("OPERATOR KIRITING YANI (+ - / * %)"));
 let son2 = (+prompt("IKINCHI SONI KIRITING"));
 let netija = hisoblash(son1, son2, operator);
 console.log(`${son1} ${operator} ${son2} = ${netija}`);
